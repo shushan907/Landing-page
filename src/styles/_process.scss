@@ -1,0 +1,100 @@
+@import 'mixin';
+@import 'config';
+
+.process {
+    padding-bottom: 0;
+    text-align: center;
+    
+    .process__text  {
+        @include smartAgancy;
+        &_lorem {
+            @include smartLorem;
+        }
+        &_color {
+            color: $orange;
+        }
+    }
+    
+    &__container {
+        @include container;
+        i {
+            @include hover {
+                border-radius: 0; 
+            }; 
+            opacity: 0.8;
+            color: $white;
+            font-size: 50px;
+            font-weight: 400;
+        }
+        .box-text{
+            opacity: 0.9;
+            color: $white;
+            font-family: "Open Sans - Semibold";
+            font-size: 20px;
+            line-height: 42px;
+            padding-top: 23px;
+        }
+        .box-lorem {
+            opacity: 0.75;
+            color: $white;
+            font-family: "Open Sans";
+            font-size: 15px;
+            padding-top: 23px;
+        }
+        .box-more {
+            @include hover;
+            width: 228px;
+            height: 55px;
+            box-shadow: 0 0 14px rgba(20, 20, 21, 0.05);
+            border-radius: 27px;
+            background-color: $white;
+            position: absolute;
+            bottom: -27.5px;
+            left: 17.5px;
+            line-height: 55px;
+            i, span {
+                font-size: 16px;
+                color: $black;
+                opacity: 0.7;
+            }
+            i {
+                padding-right: 20px;
+            }
+        }
+        @for $i from 0 through 3 {
+            .process__container_box#{$i+1} {
+                @include hover;
+                position: relative;
+                padding-top: 53px;
+                flex: 1;
+                margin-top: 48px;
+                max-width: 262px;
+                min-width: 262px;
+                text-align: center;
+                height: 263px;
+            }
+        }
+        &_box1 {
+            background-color: $box1;
+        }
+        &_box2 {
+            background-color: $box2;
+        }
+        &_box3 {
+            background-color: $box3;
+        }
+        &_box4 {
+            background-color: $box4;
+        }
+        .rotate {
+            transform: rotate(-20deg);
+        }
+    }
+}
+
+
+
+
+
+
+

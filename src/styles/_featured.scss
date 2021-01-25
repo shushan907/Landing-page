@@ -1,0 +1,35 @@
+@import 'mixin';
+@import 'config';
+
+.featured {
+    background-color: $light-grey;
+    max-width: 1800px;
+    margin: 128px auto;
+    &__text  {
+        @include smartAgancy;
+        &_lorem {
+            @include smartLorem;
+        }
+        &_color {
+            color: $orange;
+        }
+    }
+    .interer__container {
+        @include container;
+
+        &_box {
+            @include hover {
+                border-radius: 0;
+            };
+            position: relative;
+            flex: 1;
+            max-width: 360px;
+            min-width: 360px;
+            text-align: center;
+            height: 358px;
+            background-image: url(../images/interer.png);
+            background-size: cover;
+            margin-top: 20px;
+        }
+    }
+}

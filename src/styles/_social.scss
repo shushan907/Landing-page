@@ -1,0 +1,31 @@
+@import 'mixin';
+@import 'config';
+
+.social {
+    max-width: 1800px;
+    margin: 0 auto;
+    background-color: #fbfbfb;
+    min-height: 202px;
+    width: 100%;
+    .social__container {
+        @include container;
+        padding-left: 153px;
+        padding-right: 153px;
+        @for $i from 0 through 5 {
+            .social__container_box#{$i+1} {
+                @include hover;
+                flex: 1;
+            }
+        }
+        .social__container_box1, .social__container_box4 {
+            @include social(122px, 30px, url(../images/partner4.png) )
+        }
+        .social__container_box2, .social__container_box5 {
+            @include social(134px, 33px, url(../images/partner1.png) )
+        }
+        .social__container_box3, .social__container_box6 {
+            @include social(135px, 27px, url(../images/partner2.png) )
+        }
+        
+    }
+}

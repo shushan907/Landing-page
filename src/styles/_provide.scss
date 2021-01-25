@@ -1,0 +1,94 @@
+@import 'mixin';
+@import 'config';
+
+.provide {
+    padding-top: 102px;
+    padding-bottom: 102px;
+    text-align: center;
+    .provide__text {
+        @include smartAgancy;
+        &_lorem {
+            @include smartLorem;
+        }
+        &_color {
+            color: $orange;
+        }
+    }
+    .provide__container {
+        margin: auto;
+        @include container;
+        
+        .provide__container_box1>div {
+            @include hover {
+                background-color: $white;
+            };
+            width: 104px;
+            height: 92px;
+            border-radius: 2px; 
+            margin-bottom: 7px;
+            align-items: center; 
+            justify-content: center;
+            background-color: #fbfbfb;
+            img {
+                padding-top: 10px;
+            }
+        }
+        .provide__container_box2 {
+            .provide__modern {
+                width: 273px;
+                height: 31px;
+                opacity: 0.75;
+                color: #000000;
+                font-family: "Open Sans";
+                font-size: 30px;
+                line-height: 45.74px;
+                text-align: left;
+                padding-bottom: 20px;
+            }
+            position: relative;
+            .box-more {
+                @include hover;
+                max-width: 228px;
+                height: 55px;
+                box-shadow: 0 0 14px rgba(20, 20, 21, 0.05);
+                border-radius: 27px;
+                background-color: $white;
+                line-height: 55px;
+                text-align: center;
+                position: static;
+                margin-bottom: 20px;
+                i, span {
+                    font-size: 16px;
+                    color: $black;
+                    opacity: 0.7;
+                }
+                i {
+                    padding-right: 20px;
+                }
+            }
+            .provide__lorem {
+                opacity: 0.7;
+                color: $black;
+                font-family: "Open Sans";
+                font-size: 16px;
+                line-height: 25px;
+                text-align: left;
+
+                div {
+                    padding-bottom: 30px;
+                }
+            }
+        }
+        .provide__container_box3 {
+            @include hover {
+                border-radius: 0;
+            }
+            min-width: 361px;
+            max-width: 320px;
+            height: 403px;
+            background-image: url(../images/apple.svg);
+            background-size: cover;
+        }
+    }
+}
+

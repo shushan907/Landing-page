@@ -1,0 +1,87 @@
+@import 'mixin';
+@import 'config';
+
+.client {
+    
+    text-align: center;
+    background-color: $white;
+    max-width: 1440px;
+    margin: 0 auto;
+
+    .client__text {
+        @include smartAgancy;
+        &_lorem {
+            @include smartLorem;
+        }
+        &_color {
+            color: $orange;
+        }
+    }
+    .slider {
+        padding-top: 102px;
+        margin: auto;
+        max-width: 1128px;
+            .slider__content {
+                @include hover;
+                margin-top: 52px;
+                margin-bottom: 53px;
+                width: 537px;
+                height: 271px;
+                box-shadow: 0 0 0 rgba(20, 20, 21, 0.38);
+                border-radius: 1px;
+                background-color: #ffffff;
+                margin-right: 18.5px;
+                margin-left: 18.5px;
+                position: relative;
+                    &_avatar {
+                        position: absolute;
+                        border-radius: 50%;
+                        z-index: 100000;
+                        top: -46.5px;
+                        left: 40%;
+                        max-width: 97px;
+                        min-width: 97px;
+                        height: 97px;
+                        background-image: url(../images/avatar.png);
+                        background-size: cover;
+                    }
+                    &_text {
+                        padding: 98px 20px 0 20px;
+                        opacity: 0.7;
+                        color: $black;
+                        font: {
+                            family: "Source Sans Pro";
+                            size: 17px;
+                        }
+                        line-height: 27px;
+                        text-align: center;
+                    }
+                    &_stars {
+                        padding-top: 19px;
+                        i {
+                            color: #FFEF3B;
+                            font-size: 12px;
+                        }
+                    }
+                    &_name {
+                        padding-top: 22px;
+                        height: 16px;
+                        opacity: 0.8;
+                        color: $black; 
+                        font: {
+                            family: "Source Sans Pro - It";
+                            size: 17px;
+                        }
+                        line-height: 27px;
+                        text-align: center;
+                        span {
+                            font: {
+                                family: "Source Sans Pro - Semibold";
+                                weight: 600;
+                            }
+                        }
+                    }
+            }
+    }
+
+}

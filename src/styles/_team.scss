@@ -1,0 +1,57 @@
+@import 'mixin';
+@import 'config';
+
+.team {
+    text-align: center;
+    background-color: $light-grey;
+    max-width: 1800px-102px-144px;
+    margin: 0 auto;
+    .team__text {
+        @include smartAgancy;
+        &_lorem {
+            @include smartLorem;
+        }
+        &_color {
+            color: $orange;
+        }
+    }
+    .team__container {
+        @include container;
+        margin-top: 67px;
+        &_box {
+            @include hover;
+            position: relative;
+            flex: 1;
+            max-width: 359px;
+            min-width: 359px;
+            text-align: center;
+            height: 445px;
+            background-image: url(../images/profile.png);
+            background-size: cover;
+            margin-bottom: 60px;
+        }
+        .team__info {
+            @include hover;
+            position: absolute;
+            width: 262px;
+            height: 95px;
+            box-shadow: 1px 6px 16px rgba(20, 20, 21, 0.08);
+            border-radius: 2px;
+            background-color: $white;
+            z-index: 10;
+            bottom: -47.5px;
+            left: 48.5px;
+                .font-30 {
+                    font-size: 30px;
+                    opacity: 0.9;
+                    padding-bottom: 5px;
+                }
+                .font-16 {
+                    font-size: 16px;
+                    opacity: 0.7;
+                    padding-bottom: 5px;
+                }
+            padding-top: 20px;
+        }
+    }
+}

@@ -1,0 +1,85 @@
+@import 'config';
+@import 'header_mixins';
+@import 'mixin';
+
+.header {
+    background-image: url(../images/inside.png);
+    background-size: cover;
+    max-width: 1800px;
+    margin: 0 auto;
+    padding-top: 82px;
+    position: relative;
+    
+    input {
+        height: 35px;
+    };
+
+    textarea {
+        height: 65px;
+    };
+
+    input, textarea {
+        border: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.22);
+        width: 294px;
+        opacity: 0.6;
+    };
+
+    .header__smart {
+        @include smart;
+        @include hover {
+            box-shadow: 10px 10px 37px rgba(198, 198, 201, 0.19);
+        };
+        &_color {
+            color: $orange;
+        }
+    };
+    
+    .header__settings {
+        @include hover;
+        position: absolute;
+        margin-top: -63px;
+        @for $i from 0 through 2 {
+            &-#{$i} {
+              @extend %settings;
+              $length: -31px*$i;  
+              background-position: 0 $length;
+            }
+        }
+    };
+
+    .header__smartAgancy {
+
+        @include smartAgancy;
+
+        &_color {
+            color: $orange;
+        }
+        &_lorem {
+            @include smartLorem;
+        }
+    };
+
+    .header__sendMassage {
+        @include massage;
+
+        margin-left: 153px;
+        p {
+            padding-top: 35px;
+        }
+        &_button {
+            @include buttonSend;
+            @include hover;
+        }
+        &_text {
+            @include sendMassageText;
+            span {
+                color: $orange;
+            }
+        }
+    };
+    i {
+        font-size: 50px;
+        color:#ff5c36;
+    }
+};

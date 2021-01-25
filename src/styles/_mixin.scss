@@ -1,0 +1,64 @@
+//MEDIA
+@mixin large-screen() {
+    @media only screen and (min-width: 1140px) {
+        @content;
+    }
+};
+
+@mixin medium-screen() {
+    @media screen and (min-width: 550px) and (max-width: 1139px) {
+        @content;
+    }
+};
+
+@mixin small-screen() {
+    @media screen and (max-width: 549px) {
+        @content;
+    }
+};
+
+@mixin smartLorem {
+    @include mainStyles(16px, 400, $open_sans);
+    @include mainSizeStyles(703px, 67px, 0, 1);
+    color: $black;
+    opacity: 0.6;
+    line-height: 25px;
+    margin-top: 26px;
+}
+
+@mixin smartAgancy {
+    @include mainStyles(50px, 600);
+    @include mainSizeStyles(662px, 50px, 0, 0.94);
+    color: $dark-grey;
+    line-height: 45.74px;
+    margin: 0 auto;
+}
+
+@mixin container {
+    padding-top: 100px;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 1141px;
+    margin: 0 auto;
+}
+
+@mixin social ($width, $height, $url) {
+    min-width: $width;
+    max-width: $width;
+    height: $height;
+    background-image: $url;
+    background-size: cover;
+}
+
+@mixin hover {
+    &:hover, &:focus {
+        box-shadow: 0 0 27px rgba(20, 20, 21, 0.09);
+        cursor: pointer;
+        transition-delay: 0.2s;
+        outline: none;
+        @content;
+    }
+}

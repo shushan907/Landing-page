@@ -1,0 +1,203 @@
+@import 'mixin';
+
+@include large-screen {
+    
+    .header {
+        height: 960px;
+        &__smartAgancy { 
+            padding-top: 326px - 44px - 82px;
+         }
+        &__settings {
+            right: 149px;
+        }
+        &__smart {
+            margin-left: 153px;
+        }
+        i {
+            display: none;
+        }
+    }
+    
+    .featured {
+        margin: 128px auto;
+        padding: 102px 0 177px 0;
+    }
+    .client, .team {
+        padding: 102px 144px 177px 144px;
+    }
+    .process {
+        padding: 149px;
+    }
+    .contact__social_icon {
+        margin-right: 25px;
+    }
+    .provide {
+        &__container_box1 {
+            flex: 1;
+        }
+        &__container_box2 {
+            flex: 3;
+        }
+        &__container_box3 {
+            flex: 2;
+        }
+        .provide__lorem {
+            .box-more {
+                bottom: 30px;
+            }
+        }
+    }
+    
+};
+
+@include medium-screen {
+    .header {
+        height: 760px;
+        &__smartAgancy { 
+            padding-top: 70px;
+        }
+        &__smartAgancy, &__smartAgancy_lorem {
+            width: 550px;
+        }
+        &__settings {
+            right: 49px;
+        }
+        &__smart {
+            margin-left: 153px;
+        }
+        i {
+            display: none;
+        }
+    }
+    .contact {
+        &__social_text {
+            display: block;
+            margin-top: 50px;
+        }
+        &__social_icon {
+            margin-right: 15px;
+        }
+        &__social span {
+            margin-right: 25px;
+        }
+    }
+    
+    .client, .team, .featured {
+        padding: 102px 77px 177px 77px;
+    }
+
+    .process {
+        padding: 149px 49px;
+    }
+    .provide {
+        &__container {
+            display: block;
+        }
+        
+        &__container_box2 {
+            width: 320px;
+        }
+        .provide__lorem {
+            .box-more {
+                bottom: -30px;
+            }
+        }
+    }
+    
+}
+
+@include small-screen {
+    .header {
+        height: 460px;
+        &__sendMassage {
+            display: none;
+        }
+        i {
+            display: block;
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+        }
+        &__smartAgancy, &__smartAgancy_lorem {
+            width: 300px;
+        }
+        &__settings {
+            right: 10px;
+        }
+        &__smart {
+            margin-left: 10px;
+        }
+    }
+    .contact {
+        &__social_text {
+            display: block;
+            margin-top: 50px;
+        }
+        &__social_icon {
+            margin-right: 5px;
+        }
+        &__social span {
+            margin-right: 1px;
+        }
+    }
+   
+    .client, .team, .featured {
+        padding: 102px 0 177px 0;
+    }
+    .process {
+        padding: 149px 0;
+    }
+    .social__container>div {
+        margin-bottom: 10px;
+    }
+    
+    .provide {
+        &__container_box1 {
+            margin-top: 30px;
+        }
+        .provide__lorem {
+            width: 250px;
+            .box-more {
+                bottom: -30px;
+            }
+        }
+        &__text_lorem {
+            width: 250px;
+            margin: auto;
+        }
+        &__container_box1, &__container_box3 {
+            margin-top: 60px;
+        }
+        
+    }
+    
+}
+
+@media screen and (max-width: 495px) {
+    .provide {
+        .provide__container {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-direction: column-reverse;
+
+            &_box2 {
+                width: 100%;
+                padding: 0 60px;
+                box-sizing: border-box;
+            }
+        }
+
+        .provide__container .provide__container_box2 {
+            .provide__modern {
+                width: 100%;
+                text-align: center;
+                height: auto;
+            }
+            .provide__lorem {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+}
